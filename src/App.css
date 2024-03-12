@@ -28,6 +28,28 @@
   color: #61dafb;
 }
 
+.custom-dots-container {
+  display: flex;
+  align-items: center;
+}
+
+.custom-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.active-dot {
+  position: absolute;
+  height: 10px; /* Height of the active dot */
+  background-color: blue;
+  border-radius: 5px; /* Half of the height */
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
