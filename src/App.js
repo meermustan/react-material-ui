@@ -5,6 +5,7 @@ import SwipeableTabs from './components/SwipeableTabs';
 import CircularTabBar from './components/CircularTabs';
 import { Button,Checkbox } from '@material-ui/core';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
+import MultiSlider from './components/MultiSlider';
 
 function App() {
 
@@ -20,12 +21,13 @@ function App() {
   return (
     <div className="App">
         <h2>this is dots</h2>
+       <MultiSlider />
        <CustomDots totalDots={4} />
        <SwipeableTabs />
        <CircularTabBar  tabs={myTabs} onTabClick={handleTabClick} />
        {/* <CustomDateTimePicker /> */}
        <Button >Good</Button>
-       <Checkbox color="success" ></Checkbox>
+       <Checkbox color="success" ></Checkbox> 
     </div>
   );
 }

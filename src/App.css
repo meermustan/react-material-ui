@@ -13,6 +13,10 @@
   }
 }
 
+.MuiTooltip-popper {  /* Target Material-UI tooltip class */
+  background-color: transparent !important;  /* Set transparent background with high specificity */
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
