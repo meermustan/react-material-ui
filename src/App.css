@@ -1,3 +1,4 @@
+@import "rsuite/dist/rsuite.css";
 .App {
   text-align: center;
 }
@@ -13,10 +14,94 @@
   }
 }
 
+.rs-picker-toolbar-ranges{
+  display: none;
+}
+
+.rs-calendar-table-cell-selected{
+  background-color: #fb6661;
+  border-radius: 10px;
+}
+.rs-picker-popup .rs-calendar .rs-calendar-table-cell-selected:hover .rs-calendar-table-cell-content{
+  background-color: #fb6661;
+}
+.rs-calendar-table-cell-selected .rs-calendar-table-cell-content{
+  background-color: transparent;
+}
+.rs-calendar-table-cell-selected-start{
+  border-radius: 0;
+  border-radius: 60px;
+}
+
+.rs-btn-primary{
+  background-color: #fb6661;
+}
+
+.rs-btn-primary:hover{
+  background-color: #fb6661;
+}
+
+.rs-btn-primary:disabled, .rs-btn-primary.rs-btn-disabled{
+  background-color: grey;
+}
+
+.rs-calendar-table-cell-selected-start.rs-calendar-table-cell-selected::before{
+  background-color: #F2F2F7;
+  z-index: -1;
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
+}
+.rs-calendar-table-cell-selected-start.rs-calendar-table-cell-content{
+  border-radius: 0;
+}
+
+.rs-calendar-table-cell-selected-end{
+  border-radius: 0;
+  border-radius: 60px;
+}
+.rs-calendar-table-cell-selected-end .rs-calendar-table-cell-content{
+  border-radius: 0px;
+}
+.rs-calendar-table-cell-selected-end.rs-calendar-table-cell-selected::before{
+  background-color: #F2F2F7;
+  z-index: -1;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+
+.rs-picker-popup .rs-calendar .rs-calendar-table-cell-selected:hover .rs-calendar-table-cell-content{
+  border-radius: 60px;
+}
+
+.rs-calendar-table-cell-is-today .rs-calendar-table-cell-content{
+  -webkit-box-shadow: inset 0 0 0 1px #ff3434;
+  -webkit-box-shadow: inset 0 0 0 1px #ff3434;
+  box-shadow: inset 0 0 0 1px #ff3434;
+  box-shadow: inset 0 0 0 1px #ff3434;
+  border-radius: 60px;
+}
+
+.rs-calendar-table-cell-in-range::before{
+  background-color: #F2F2F7;
+}
+
+.rs-picker-popup .rs-calendar .rs-calendar-table-cell:hover .rs-calendar-table-cell-content{
+  background-color: #fb66612a;
+  color: white;
+  border-radius: 60px;
+}
+
+
 .MuiTooltip-popper {  /* Target Material-UI tooltip class */
   background-color: transparent !important;  /* Set transparent background with high specificity */
 }
 
+.rmdp-range {
+  background-color: #282c34 !important;
+}
+.rmdp-range & .start{
+  background-color: yellow !important;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
