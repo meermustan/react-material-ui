@@ -7,6 +7,7 @@ import { Button,Checkbox } from '@material-ui/core';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import MultiSlider from './components/MultiSlider';
 import Calender from './components/Calender';
+import AudioPlayer from './components/AudioRecorderPlayer';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
        <MultiSlider />
        <CustomDots totalDots={4} />
        <SwipeableTabs />
+       <AudioPlayer />
        <CircularTabBar  tabs={myTabs} onTabClick={handleTabClick} />
        {/* <CustomDateTimePicker /> */}
        <Button >Good</Button>
