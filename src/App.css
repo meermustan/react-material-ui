@@ -138,6 +138,345 @@
   border-radius: 5px; /* Half of the height */
 }
 
+.picker-container{
+  position: absolute;
+  top: 120%;
+  /* height: 250px; */
+  width: 250px;
+  display:flex;
+  flex-direction: column;
+  border-radius: 6px;
+  border: 1px solid #cacce8;
+  background: rgb(255, 255, 255);
+  font-family: 'Lato', sans-serif;
+}
+
+.picker-container::before{
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  transform: rotate(-45deg);
+  top: -5px; 
+  left: 15px;
+  background: #d0d5eb;
+  border-top: 1px solid #cacce8;
+  border-right: 1px solid #cacce8;
+}
+
+.date-picker-container{
+  height: 40px;
+  position: relative;
+}
+
+.picker-input{
+  outline: none;
+  border-radius: 4px;
+  height: 40px;
+  font-size: 14px;
+  border: 1px solid rgba(34,36,38,.15);
+  padding: 0px 10px;
+}
+
+.picker-input:hover{
+  cursor: pointer;
+}
+
+.day-picker{
+  display: flex;
+  flex-direction: column;
+}
+
+.day-header{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #d0d5eb;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.inc-month, .dec-month{
+  padding: 19px 10px;
+  color: #9390af;
+}
+
+.inc-month:hover, .dec-month:hover{
+  color: #4336b8;
+  cursor: pointer;
+}
+
+.month-year{
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.year-menu-btn-2{ 
+  margin-right: 6px;
+  color: #9390af;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.year-menu-btn-1{ 
+  margin-right: 6px;
+  color: #9390af;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.month-year-content{
+  padding: 5px;
+  border: 1px solid #d0d5eb;
+  border-radius: 4px;
+  display: flex;
+}
+
+.month-year-content:hover{
+ border: 1px solid rgb(241, 241, 241);
+ cursor: pointer;
+
+}
+
+.week-days{
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px ;
+}
+
+.week-name{
+  flex: 1;
+  text-align: center;
+  padding: 5px 3px; 
+  color: rgb(155, 155, 155);
+}
+.day-item{
+  flex: 1;
+  padding: 10px 3px; 
+  border-radius: 4px;
+  text-align: center;
+}
+
+.day-chart{
+  display: flex;
+  flex-flow: row wrap;
+  padding: 6px;
+}
+.extra-days{
+  min-width: 25px;
+  max-width: 25px;
+  padding: 10px 3px; 
+  text-align: center;
+  color: rgb(185, 185, 185);
+}
+
+
+.day-item:hover{
+  cursor: pointer;border-radius: 4px;
+  background: rgb(240, 240, 240);
+}
+
+.active-day{
+  border-radius: 4px;
+  background: #4336b8;
+  color: white;
+}
+
+.active-day:hover{
+  border-radius: 4px;
+  background: #4336b8;
+  color: white;
+}
+
+
+
+
+.picker-year-select-container{
+  height: 202px;
+  padding: 6px;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 5px;
+  overflow-y: scroll;
+}
+
+.picker-year{
+  width: 30%;
+  padding: 10px 0px; 
+  border-radius: 4px;
+  text-align: center;
+  margin: 3px;
+}
+
+.picker-year:hover{
+  cursor: pointer;
+  background: rgb(240, 240, 240);
+}
+
+.active-year{
+  border-radius: 4px;
+  background: #4336b8;
+  color: white;
+}
+
+.active-year:hover{
+  border-radius: 4px;
+  background: #4336b8;
+  color: white;
+}
+
+.picker-footer{
+  padding: 17px 0px 10px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+}
+
+.picker-cancel{ 
+  background: none;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  color: #979797;
+  font-size: 14px;
+  padding: 8px 16px;
+  margin-right: 10px;
+  width: 90px;
+}
+
+.picker-ok{ 
+  font-size: 14px;
+  background: #5a43c8;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  color: #fff;
+  padding: 5px 13px;
+  margin-right: 10px;
+  width: 90px;
+}
+
+
+
+/* time picker stuff  */
+
+.time-header{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #d0d5eb;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.time-edit-container{
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.scroll-select-container{
+  position: relative;
+  flex: 1; 
+  height: 100%;
+}
+
+.scroll-selector-area{
+  position: absolute;
+  border-top: 1px solid #ebeefa;
+  border-bottom: 1px solid #ebeefa;
+  width: 100%;
+  z-index: -1;
+}
+
+.scroll-select-list{
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: scroll;
+  padding-bottom: 37%;
+  color: rgb(187, 187, 187);
+  position: relative;
+}
+
+.scroll-select-list::-webkit-scrollbar { width: 0 !important }
+
+.scroll-item{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* padding: 10px; */
+}
+
+.scroll-item:hover{
+  cursor: pointer;
+}
+
+.selected-time{
+  color: rgb(29, 29, 29);
+  font-weight: bold;
+  transition: all 0.2s ;
+  color: rgb(50, 50, 50);
+}
+
+.mask{
+  display: flex;
+}
+
+@media all and (max-width: 768px) {
+
+  .demo-container{
+      flex-direction: column;
+      width: 80vw;
+      margin: 0 auto;
+  }
+
+  .demo-1{
+      padding: 50px;
+  }
+
+  .picker-container{
+      position: relative;
+      top:unset;
+      margin: 0 auto;
+      width: 250px;
+      display:flex;
+      flex-direction: column;
+      border-radius: 6px;
+      border: 1px solid #cacce8;
+      background: rgb(255, 255, 255);
+      font-family: 'Lato', sans-serif;
+      box-shadow: 0px 2px 15px 3px rgba(0, 0, 0, 0.26)
+  }
+
+  .picker-container::before{
+      visibility: hidden;
+  }
+  
+  .mask{
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      transform: unset;
+      top: 0px; 
+      left: 0px;
+      bottom:0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.75);
+      border: unset;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+  }
+
+}
+
 
 @keyframes App-logo-spin {
   from {

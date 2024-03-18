@@ -1,39 +1,42 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import CustomDots from './components/CustomDots';
-import SwipeableTabs from './components/SwipeableTabs';
-import CircularTabBar from './components/CircularTabs';
-import { Button,Checkbox } from '@material-ui/core';
-import AcUnitIcon from '@mui/icons-material/AcUnit';
-import MultiSlider from './components/MultiSlider';
-import Calender from './components/Calender';
-import AudioPlayer from './components/AudioRecorderPlayer';
+import TimePicker from "./components/TimeSelector";
 
-function App() {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedTime: "10:00 am", // Example initial value for selectedTime
+    };
+  }
 
-  const handleTabClick = (index) => {
+  handleTabClick = (index) => {
     console.log(`Tab ${index + 1} clicked!`);
   };
 
-  const myTabs = [
-    {icon: 'home', content:'home'},
-    {icon: 'setting', content:'setting'},
-  ]
+  render() {
+    const myTabs = [
+      { icon: 'home', content: 'home' },
+      { icon: 'setting', content: 'setting' },
+    ];
 
-  return (
-    <div className="App">
+    return (
+      <div className="App">
         <h2>this is dots</h2>
-        <Calender />
-       <MultiSlider />
-       <CustomDots totalDots={4} />
-       <SwipeableTabs />
-       <AudioPlayer />
-       <CircularTabBar  tabs={myTabs} onTabClick={handleTabClick} />
-       {/* <CustomDateTimePicker /> */}
-       <Button >Good</Button>
-       <Checkbox color="success" ></Checkbox> 
-    </div>
-  );
+        <TimePicker 
+          pickerWidth={250}
+          showMonthSelector={true}
+          selectedTime={this.state.selectedTime}
+          changeInputTime={inputTime => console.log(inputTime)}
+          changeSelectedTime={selectedTime => console.log(selectedTime)}
+          openPicker={() => console.log("picker")}
+          onOk={(value)=>console.log("here is time okay,",value)}
+          closePicker={()=>{}}
+        />
+        {/* Rest of your components */}
+      </div>
+    );
+  }
 }
 
 export default App;
