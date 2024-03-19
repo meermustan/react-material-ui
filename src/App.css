@@ -1,4 +1,4 @@
-@import "rsuite/dist/rsuite.css";
+/* @import "rsuite/dist/rsuite.css"; */
 .App {
   text-align: center;
 }
@@ -387,10 +387,10 @@
 
 .scroll-selector-area{
   position: absolute;
-  border-top: 1px solid #ebeefa;
-  border-bottom: 1px solid #ebeefa;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e2e2e2;
   width: 100%;
-  z-index: -1;
+  z-index: 1;
 }
 
 .scroll-select-list{
@@ -410,7 +410,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* padding: 10px; */
 }
 
 .scroll-item:hover{

@@ -1,42 +1,46 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import TimePicker from "./components/TimeSelector";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedTime: "10:00 am", // Example initial value for selectedTime
-    };
-  }
 
-  handleTabClick = (index) => {
-    console.log(`Tab ${index + 1} clicked!`);
+export default function App() {
+  const [selectedTime, setSelectedTime] = useState("10:00 am");
+
+  const handleTimeInput = (inputTime) => {
+    console.log("Input Time:", inputTime);
   };
 
-  render() {
-    const myTabs = [
-      { icon: 'home', content: 'home' },
-      { icon: 'setting', content: 'setting' },
-    ];
+  const handleTimeSelection = (selectedTime) => {
+    console.log("Selected Time:", selectedTime);
+  };
 
-    return (
-      <div className="App">
-        <h2>this is dots</h2>
+  const handleTimePickerClose = () => {
+    // Handle closing of the time picker if needed
+  };
+
+  const handleTimePickerOpen = () => {
+    // Handle opening of the time picker if needed
+  };
+
+  const handleTimePickerOk = (value) => {
+    console.log("Time Picker Value:", value);
+    // You can perform additional actions here after the user selects a time
+  };
+
+
+  return (
+    <div>
+
         <TimePicker 
           pickerWidth={250}
           showMonthSelector={true}
-          selectedTime={this.state.selectedTime}
-          changeInputTime={inputTime => console.log(inputTime)}
-          changeSelectedTime={selectedTime => console.log(selectedTime)}
-          openPicker={() => console.log("picker")}
-          onOk={(value)=>console.log("here is time okay,",value)}
-          closePicker={()=>{}}
+          selectedTime={selectedTime}
+          changeInputTime={handleTimeInput}
+          changeSelectedTime={handleTimeSelection}
+          openPicker={handleTimePickerOpen}
+          onOk={handleTimePickerOk}
+          closePicker={handleTimePickerClose}
         />
-        {/* Rest of your components */}
-      </div>
-    );
-  }
+    </div>
+  )
 }
-
-export default App;

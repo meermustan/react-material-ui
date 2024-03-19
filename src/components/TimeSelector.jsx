@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Moment from 'moment';
 import ScrollSelect from './ScrollSelect';
 import { HRS, MINUTES, AMPM, MONTH } from './constant';
-
+import PropTypes from 'prop-types';
 
 /**
  * TimePicker component for selecting time.
