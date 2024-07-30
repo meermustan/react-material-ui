@@ -10,7 +10,6 @@ const useStyles = makeStyles({
     border: '2px solid transparent',
     boxShadow: 'none',
     borderRadius: 50,
-    minWidth: 280,
     transition: 'border-color 0.3s ease-in-out',
   },
   selected: {
